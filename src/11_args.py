@@ -53,7 +53,11 @@ print(f3(8))     # Should print 9
 # Note: Google "python keyword arguments".
 
 # YOUR CODE HERE
-def f4()
+def f4(**kwargs):
+    print(kwargs)
+    for key in kwargs:
+        print(f'key: {key}, value: {kwargs[key]}')
+
 # Should print
 # key: a, value: 12
 # key: b, value: 30
@@ -70,5 +74,5 @@ d = {
     "hp": 3
 }
 
-# How do you have to modify the f4 call below to make this work?
-f4(d)
+# How do you have to modify the f4 call below to make this work? 
+f4(**d) #add two asterisks
